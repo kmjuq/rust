@@ -2,6 +2,9 @@ use rand::Rng;
 use std::{cmp::Ordering, io};
 
 fn main() {
+    let arr = [1, 2, 3, 4, 5];
+    another_fn(arr[3]);
+
     let random_num = rand::thread_rng().gen_range(1..101);
     println!("猜数字游戏");
     loop {
@@ -25,4 +28,12 @@ fn main() {
         }
     }
     println!("bingo");
+}
+
+fn another_fn(x: i32) {
+    let y = {
+        let x = 5;
+        x + 4
+    };
+    println!("the value of x is {x} {y}")
 }
